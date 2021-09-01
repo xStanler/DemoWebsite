@@ -1,0 +1,203 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background: rgb(0,0,0);
+    background: linear-gradient(145deg, rgba(0,0,0,1) 0%, rgba(17,17,17,1) 25%, rgba(34,34,34,1) 50%, rgba(51,51,51,1) 75%, rgba(68,68,68,1) 100%);
+    color: #efefef;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+.navigator
+{
+    width: 100vw;
+    background: rgba(60, 60, 60, 0.7);
+    backdrop-filter: blur(5px);
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 4fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "box-logo . . box-nav";
+    border-bottom: 5px #202020 solid;
+    position:fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.navigator-logo
+{
+    grid-area: box-logo;
+    align-self: center;
+    justify-self: center;
+    font-size: 36px;
+    margin-bottom: 10px;
+    filter: brightness(50%);
+    cursor: default;
+    transition: filter 0.3s ease-in-out;
+}
+
+.navigator-logo:hover
+{
+    filter: brightness(100%);
+}
+
+.nav
+{
+    grid-area: box-nav;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-list
+{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-list-item
+{
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.nav-list-item a
+{
+    text-decoration: none;
+    color: #efefef;
+}
+
+.container
+{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px 100px 400px 150px 400px;
+    grid-template-areas: 
+        "main-img main-img"
+        "space1 space1"
+        "pc pc"
+        "space2 space2"
+        "phone phone";
+}
+
+.main-img
+{
+    background-image: url(img/container-bg.jpg);
+    background-repeat: no-repeat;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    grid-area: main-img;
+    height: 400px;
+}
+
+.space1
+{
+    grid-area: space1;
+    background-color: #212121;
+    width: 100vw;
+}
+
+.space2
+{
+    grid-area: space2;
+    height: 150px;
+    background-color: #070707;
+    display: block;
+}
+
+.computer
+{
+    grid-area: pc;
+    width: 100vw;
+    display: grid;
+    height: 400px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "c-txt c-img";
+    
+    background: rgb(0,0,0);
+    backdrop-filter: blur(5px);
+}
+
+.computer-txt
+{
+    grid-area: c-txt;
+    padding: 40px;
+    font-size: 15px;
+    text-align: center;
+    width: 45vw;
+    align-self: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.computer-img
+{
+    grid-area: c-img;
+    height: 400px;
+    width: 50vw;
+    background-image: url(img/computer.jpg);
+    /*Photo by Junior Teixeira from Pexels*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.phone
+{
+    background-color: #040404;  
+    grid-area: phone;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "p-img p-txt";
+    filter: blur(10px);
+    transition: filter 1.5s ease-in-out;
+}
+
+.phone-article
+{
+    width: 50vw;
+    grid-area: p-txt;
+    text-align: center;
+    padding: 50px;
+    margin-top: 75px;
+    opacity: 0;
+    transition: opacity 2.5s ease-in-out;
+}
+
+.phone-img
+{
+    grid-area: p-img;
+    width: 50vw;
+    height: 400px;
+    background: url('img/iphone.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.apple
+{
+    background: url('img/apple.jpg');
+    width: 100vw;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(20%);
+    transition: filter 2s ease-in-out;
+}
