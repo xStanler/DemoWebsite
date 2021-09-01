@@ -10,6 +10,16 @@
     width: 0;
 }
 
+::moz-scrollbar
+{
+    width: 0;
+}
+
+::scrollbar
+{
+    width:0;
+}
+
 body
 {
     background: rgb(0,0,0);
